@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 
-path ="C:\\Users\\vinhx\\OneDrive\\NOV\SQL\\DPForImport\\"
+path ="C:\\Users\\Public\\Documents\\"
 
 
 
