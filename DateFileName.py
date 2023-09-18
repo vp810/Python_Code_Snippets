@@ -5,9 +5,6 @@ import os
 
 path ="C:\\Users\\Public\\Documents\\"
 
-
-
-#filepath = 'C:\\Users\\vinhx\\OneDrive\\NOV\SQL\\DPForImport\'
 # get current date and time
 current_datetime = datetime.now().strftime("%Y-%m-%d %H-%M-%S")
 print("Current date & time : ", current_datetime)
