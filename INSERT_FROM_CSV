@@ -1,0 +1,20 @@
+import pyodbc
+import csv
+
+cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=HCITCB1FPK63;DATABASE=VXP;Integrated Security=True;')
+
+import csv
+
+cursor = cnxn.cursor()
+
+openFile = open('userprofile.csv', 'r')
+csvFile = csv.reader(openFile)
+header = next(csvFile)
+#headers = map((lambda x: '`'+x+'`'), header)
+headers = map((lambda x:x), header)
+insert = 'INSERT INTO dbo.UserProfiles (' + ", ".join(headers) + ") VALUES "
+for row in csvFile:
+    values = map((lambda x: '"'+x+'"'), row)
+    #cursor.execute(insert +"("+ ", ".join(values) +");" )
+    print (insert +"("+ ", ".join(values) +");" )
+openFile.close()
