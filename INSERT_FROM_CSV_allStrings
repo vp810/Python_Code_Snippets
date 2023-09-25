@@ -1,6 +1,7 @@
 import pyodbc
 import csv
 
+
 cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=HCITCB1FPK63;DATABASE=VXP;Integrated Security=True;')
 
 import csv
